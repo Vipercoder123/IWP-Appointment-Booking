@@ -11,6 +11,12 @@
     a:hover {
       color: #f1f1f1;
     }
+    .sucontainer ul {
+      background-color: grey;
+    }
+    .sucontainer {
+      border-radius: 2%;
+    }
   </style>
 </head>
 

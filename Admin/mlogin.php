@@ -1,33 +1,3 @@
-<?php 
-  function SignIn() 
-  { 
-    include 'dbconfig.php';
-
-    session_start();
-    if(!empty($_POST['uname']))  
-    { 
-      $query = mysqli_query($conn,"SELECT * FROM manager where username = '$_POST[uname]' AND password = '$_POST[pass]'");
-      $row = mysqli_fetch_array($query);
-      if(!empty($row['username']) AND !empty($row['password'])) 
-      { 
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['mgrname']=$row['name'];
-        $_SESSION['mgrid']=$row['mid'];
-        echo "Logging you in..";
-        header( "Refresh:3; url=mgrmenu.php");
-      } 
-      else 
-      { 
-        echo "Wrong Credentials!"; 
-      } 
-    }
-  } 
-  if(isset($_POST['submit'])) 
-  { 
-    SignIn(); 
-  } 
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -73,3 +43,35 @@
 </body>
 
 </html>
+
+<?php 
+  function SignIn() 
+  { 
+    include 'dbconfig.php';
+
+    session_start();
+    if(!empty($_POST['uname']))  
+    { 
+      $query = mysqli_query($conn,"SELECT * FROM manager where username = '$_POST[uname]' AND password = '$_POST[pass]'");
+      $row = mysqli_fetch_array($query);
+      if(!empty($row['username']) AND !empty($row['password'])) 
+      { 
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['mgrname']=$row['name'];
+        $_SESSION['mgrid']=$row['mid'];
+        echo "<script src=\"../assets/modal.js\"></script>";
+        echo "<script>MsgBox('Logging you in...');</script>";
+        header( "Refresh:2; url=mgrmenu.php");
+      } 
+      else 
+      { 
+        echo "<script src=\"../assets/modal.js\"></script>";
+        echo "<script>MsgBox('Wrong Credentials');</script>";
+      } 
+    }
+  } 
+  if(isset($_POST['submit'])) 
+  { 
+    SignIn(); 
+  } 
+?>

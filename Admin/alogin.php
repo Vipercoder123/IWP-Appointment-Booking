@@ -1,25 +1,3 @@
-<?php 
-  function SignIn() 
-  { 
-    session_start();
-    {  
-      if($_POST['uname']=='admin' && $_POST['pass']=='admin') 
-      { 
-        $_SESSION['userName'] = 'admin'; 
-        echo "Logging you in..";
-        header( "Refresh:3; url=mainpage.php");
-      } 
-      else { 
-        echo "Wrong Credentials!"; 
-      } 
-    }
-  } 
-  if(isset($_POST['submit'])) 
-  { 
-    SignIn(); 
-  } 
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -65,3 +43,27 @@
 </body>
 
 </html>
+
+<?php 
+  function SignIn() 
+  { 
+    session_start();
+    {  
+      if($_POST['uname']=='admin' && $_POST['pass']=='admin') 
+      { 
+        $_SESSION['userName'] = 'admin'; 
+        echo "<script src=\"../assets/modal.js\"></script>";
+        echo "<script>MsgBox('Logging you in...');</script>";
+        header( "Refresh:2; url=mainpage.php");
+      } 
+      else { 
+        echo "<script src=\"../assets/modal.js\"></script>";
+        echo "<script>MsgBox('Wrong Credentials');</script>";
+      } 
+    }
+  } 
+  if(isset($_POST['submit'])) 
+  { 
+    SignIn(); 
+  } 
+?>
