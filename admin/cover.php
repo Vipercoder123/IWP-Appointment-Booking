@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body style="background-image:url(p2.jpg)">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="assets/main.css">
 			<div class="header">
 				<ul>
 					<li style="float:left;border-right:none"><a href="index.php" class="logo"><img src="cal.png" width="30px" height="30px"><strong> Skylabs </strong>Appointment Booking System</a></li>

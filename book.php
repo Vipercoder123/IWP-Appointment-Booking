@@ -1,6 +1,20 @@
 <html>
 <head>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="assets/bootstrap.css">
+<link rel="stylesheet" href="assets/main.css">
+<style>
+	a:hover {
+		color: #f1f1f1;
+	}
+	.sucontainer {
+		border-radius: 2%;
+		color: white;
+	}
+	body {
+		background: url('images/bookback.jpg') no-repeat center center fixed; 
+		background-size: cover;
+	}
+</style
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </head><?php include "dbconfig.php"; ?>
 <script>
@@ -49,16 +63,24 @@ function getDay(val) {
 }
 
 </script>
-<body style="background-image:url(images/bookback.jpg)">
-	<div class="header">
-		<ul>
-			<li style="float:left;border-right:none"><a href="ulogin.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><strong> Skylabs </strong>Appointment Booking System</a></li>
-			<li><a href="book.php">Book Now</a></li>
-			<li><a href="ulogin.php">Home</a></li>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="ulogin.php" class="logo">
+		<img src="images/cal.png" width="30px" height="30px">
+		<b> Skylabs</b>
+		&nbspAppointment Booking System
+		</a>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+		<ul class="navbar-nav">
+			<li class="nav-item animation1">
+			<a href="ulogin.php">Home</a>
+			</li>
 		</ul>
-	</div>
+		</div>
+	</nav>
+
 	<form action="book.php" method="post">
-	<div class="sucontainer" style="background-image:url(images/bookback.jpg)">
+	<div class="sucontainer" style="background:url(images/bookback.jpg)">
 		<label><b>Name:</b></label><br>
 		<input type="text" placeholder="Enter Full name of patient" name="fname" required><br>
 		

@@ -34,7 +34,7 @@
 <head>
   <title>Cover</title>
   <link rel="stylesheet" href="assets/bootstrap.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="assets/main.css">
   <style>
     a:hover {
       color: #f1f1f1;

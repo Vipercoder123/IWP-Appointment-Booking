@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body style="background-image:url(doctordesk.jpg)">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="assets/main.css">
 	<form action="dlogin.php" method="post">
 	<div class="header">
 				<ul>

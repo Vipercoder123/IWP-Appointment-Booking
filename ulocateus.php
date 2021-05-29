@@ -4,7 +4,7 @@
 <head>
   <title>Locate Us</title>
   <link rel="stylesheet" href="assets/locateus.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="assets/main.css">
   <link rel="stylesheet" href="assets/bootstrap.css">
   <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
   <style>
@@ -178,7 +178,7 @@
     echo "<script>MsgBox('".$msg."');</script>";
   }
 
-  echo "<script>document.body.style.backgroundImage = \"url('assets/yellowpage.jpg')\"</script>";
+  echo "<script>document.body.style.backgroundImage = \"url('images/yellowpage.jpg')\"</script>";
   echo "<script>document.body.style.backgroundRepeat = \"repeat-y\"</script>";
   echo "<script>document.body.style.backgroundColor = \"\"</script>";
 ?>

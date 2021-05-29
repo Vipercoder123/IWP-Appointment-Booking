@@ -3,7 +3,7 @@
 
 <head>
   <title>Sign Up</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="assets/main.css">
   <link rel="stylesheet" href="assets/bootstrap.css">
   <style>
     a:hover {

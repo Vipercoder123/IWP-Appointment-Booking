@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="assets/main.css">
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </head><?php include "dbconfig.php"; ?>
 <body style="background-image:url(images/cancelback.jpg)">
