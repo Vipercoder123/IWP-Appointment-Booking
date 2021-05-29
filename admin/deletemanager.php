@@ -2,8 +2,13 @@
 <html>
 <head>
 <link rel="stylesheet" href="adminmain.css"> 
+<style>
+  body {
+    background: url('../images/cover.jpg') repeat-y;
+  }
+</style>
 </head>
-<body background= "managerview.jpg">
+<body>
 <ul>
 <li class="dropdown"><font color="yellow" size="10">ADMIN MODE</font></li>
 <br>
@@ -63,7 +68,16 @@ Select Name:<br><?php
 				if ($manager_result->num_rows > 0) {
 				while($row = $manager_result->fetch_assoc()) {
 				?>
-				<option value="<?php echo $row["MID"]; ?>"><?php echo "(MID=".$row["MID"].") ".$row["Name"]; ?></option>
+				<?php
+					echo "<option value='";
+					echo $row["mid"];
+					echo "'>";
+					echo "(MID=";
+					echo $row["mid"];
+					echo ") ";
+					echo $row['name'];
+					echo "</option>";
+				?>
 				<?php
 					}
 					}

@@ -22,6 +22,9 @@ tr,td{
 	background-color: white;
     color: black;
 }
+body {
+  background: url('../images/cover.jpg') repeat-y;
+}
 </style>
 
 </head>

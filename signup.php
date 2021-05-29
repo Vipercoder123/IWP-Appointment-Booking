@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item animation1">
-          <a href="#index.php">Home</a>
+          <a href="index.php">Home</a>
         </li>
         <li class="nav-item animation1">
           <a href="locateus.php">Locate Us</a>

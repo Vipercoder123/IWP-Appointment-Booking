@@ -1,8 +1,13 @@
 <html>
 <head>
 <link rel="stylesheet" href="adminmain.css"> 
+<style>
+  body {
+    background: url('../images/cover.jpg') repeat-y;
+  }
+</style>
 </head>
-<body background= "managerview.jpg">
+<body>
 <ul>
 <li class="dropdown"><font color="yellow" size="10">ADMIN MODE</font></li>
 <br>
