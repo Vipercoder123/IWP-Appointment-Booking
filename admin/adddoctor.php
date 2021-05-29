@@ -1,8 +1,18 @@
 <html>
 <head>
 <link rel="stylesheet" href="adminmain.css"> 
+<style>
+	body {
+		background: url('../images/doctorbg.jfif') no-repeat center center fixed; 
+		background-size: 100vw 100vh;
+        /* -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; */
+	}
+</style>
 </head>
-<body background= "doctordesk.jpg">
+<body>
 <ul>
 <li class="dropdown"><font color="yellow" size="10">ADMIN MODE</font></li>
 <br>

@@ -3,6 +3,11 @@
 <head>
 <link rel="stylesheet" href="adminmain.css"> 
 <style>
+body {
+  background: url('../images/clinic.jpg') no-repeat center center fixed; 
+  background-size: 100vw 100vh;
+  backdrop-filter: blur(8px);
+}
 table{
     width: 75%;
     border-collapse: collapse;

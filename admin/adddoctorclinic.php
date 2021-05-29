@@ -2,6 +2,12 @@
 <head>
 <script src="jquerypart.js" type="text/javascript"></script>
 <link rel="stylesheet" href="adminmain.css"> 
+<style>
+	body {
+		background: url('../images/clinic.jpg') no-repeat center center fixed; 
+		background-size: 100vw 100vh;
+	}
+</style>
 <script>
 function getState(val) {
 	$.ajax({
@@ -26,7 +32,7 @@ function getDoctorRegion(val) {
 
 </script>
 </head>
-<body background= "clinicview.jpg">
+<body>
 <ul>
 <li class="dropdown"><font color="yellow" size="10">ADMIN MODE</font></li>
 <br>

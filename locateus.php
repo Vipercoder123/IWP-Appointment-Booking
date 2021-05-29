@@ -155,7 +155,7 @@
     else
     {
       $msg = "Enter a valid name.";
-      echo $msg;
+      echo "<script src=\"assets/modal.js\"></script>";
       echo "<script>MsgBox('".$msg."');</script>";
     }
   }

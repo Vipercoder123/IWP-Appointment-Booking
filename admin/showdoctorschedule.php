@@ -3,6 +3,10 @@
 <head>
 <link rel="stylesheet" href="adminmain.css"> 
 <style>
+body {
+		background: url('../images/doctordesk.jpg') no-repeat center center fixed; 
+		backdrop-filter: blur(8px);
+}
 table{
     width: 75%;
     border-collapse: collapse;

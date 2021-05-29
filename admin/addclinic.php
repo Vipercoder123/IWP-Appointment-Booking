@@ -1,6 +1,12 @@
 <html>
 <head>
 <link rel="stylesheet" href="adminmain.css"> 
+<style>
+	body {
+		background: url('../images/clinic.jpg') no-repeat center center fixed; 
+		background-size: 100vw 100vh;
+	}
+</style>
 </head>
 <body background= "clinicview.jpg" behavior="fixed">
 <ul>

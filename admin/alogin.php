@@ -36,7 +36,7 @@
 					<img height="220" width="50" src="../images/user.png" id="icon" alt="User Icon">
 				</div>
 				<input type="text" id="login" class="fadeIn second" name="uname" placeholder="Enter Username" required>
-				<input type="text" id="password" class="fadeIn third" name="pass" placeholder="Enter Password" required>
+				<input type="password" id="password" class="fadeIn third" name="pass" placeholder="Enter Password" required>
 				<input type="submit" class="fadeIn fourth" name="submit" value="Log In">
 			</div>
 		</div>

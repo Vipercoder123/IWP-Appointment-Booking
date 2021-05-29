@@ -2,8 +2,14 @@
 <html>
 <head>
 <link rel="stylesheet" href="adminmain.css"> 
+<style>
+	body {
+		background: url('../images/doctordesk.jpg') no-repeat center center fixed; 
+		backdrop-filter: blur(8px);
+	}
+</style>
 </head>
-<body background= "doctordesk.jpg">
+<body>
 <ul>
 <li class="dropdown"><font color="yellow" size="10">ADMIN MODE</font></li>
 <br>
