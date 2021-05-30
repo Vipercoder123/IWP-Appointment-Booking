@@ -18,10 +18,10 @@
   <li class="dropdown">    
   <a href="javascript:void(0)" class="dropbtn">Doctor</a>
     <div class="dropdown-content">
-      <a href="adddoctor.php">Add Doctor</a>
-      <a href="deletedoctor.php">Delete Doctor</a>
-      <a href="showdoctor.php">Show Doctor</a>
-	  <a href="showdoctorschedule.php">Show Doctor Schedule</a>
+      <a href="doctor/adddoctor.php">Add Doctor</a>
+      <a href="doctor/deletedoctor.php">Delete Doctor</a>
+      <a href="doctor/showdoctor.php">Show Doctor</a>
+	  <a href="doctor/showdoctorschedule.php">Show Doctor Schedule</a>
     </div>
   </li>
   
@@ -70,7 +70,7 @@ Select Name:<br><?php
 				if ($clinic_result->num_rows > 0) {
 				while($row = $clinic_result->fetch_assoc()) {
 				?>
-				<option value="<?php echo $row["CID"]; ?>"><?php echo $row["Name"].", ".$row["Town"].", ".$row["City"].",(".$row["Address"].")"."(CID=".$row["CID"].")"; ?></option>
+				<option value="<?php echo $row["cid"]; ?>"><?php echo $row["name"].", ".$row["town"].", ".$row["city"].",(".$row["address"].")"."(CID=".$row["cid"].")"; ?></option>
 				<?php
 					}
 					}
