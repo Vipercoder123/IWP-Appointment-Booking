@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="assets/main.css">
 </head>
 <body style="background-image:url(images/userback.jpg)">
 <div class="header">
@@ -45,7 +45,7 @@ if(isset($_POST['logout']))
 {
 	session_unset();
 	session_destroy();
-	header( "Refresh:1; url=cover.php"); 
+	header( "Refresh:1; url=index.php"); 
 }
 ?>
 </body>

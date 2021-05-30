@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="assets/main.css">
 <style>
 table{
     width: 85%;
