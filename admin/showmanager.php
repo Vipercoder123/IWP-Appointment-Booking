@@ -36,10 +36,10 @@ body {
   <li class="dropdown">    
   <a href="javascript:void(0)" class="dropbtn">Doctor</a>
     <div class="dropdown-content">
-      <a href="adddoctor.php">Add Doctor</a>
-      <a href="deletedoctor.php">Delete Doctor</a>
-      <a href="showdoctor.php">Show Doctor</a>
-	  <a href="showdoctorschedule.php">Show Doctor Schedule</a>
+      <a href="doctor/adddoctor.php">Add Doctor</a>
+      <a href="doctor/deletedoctor.php">Delete Doctor</a>
+      <a href="doctor/showdoctor.php">Show Doctor</a>
+	  <a href="doctor/showdoctorschedule.php">Show Doctor Schedule</a>
     </div>
   </li>
   
