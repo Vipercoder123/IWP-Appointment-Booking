@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="../assets/bootstrap.css">
   <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
   <style>
+    body {
+      background: url("../images/mgrchange.jpg") repeat;
+
+    }
     a:hover {
       color: #f1f1f1;
     }
@@ -53,7 +57,7 @@
   }
 </style>
 
-<body style="background-image:url(../images/mgrchange.jpg)">
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="mgrmenu.php" class="logo">
       <img src="../images/cal.png" width="30px" height="30px">

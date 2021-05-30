@@ -1,9 +1,10 @@
 <html>
 <head>
-<link rel="stylesheet" href="adminmain.css"> 
+<title>Add Manager</title>
+<link rel="stylesheet" href="../../assets/adminmain.css"> 
 <style>
   body {
-    background: url('../images/cover.jpg') repeat-y;
+    background: url('../../images/cover.jpg') repeat-y;
   }
 </style>
 </head>
@@ -15,23 +16,23 @@
   <li class="dropdown">    
   <a href="javascript:void(0)" class="dropbtn">Doctor</a>
     <div class="dropdown-content">
-      <a href="doctor/adddoctor.php">Add Doctor</a>
-      <a href="doctor/deletedoctor.php">Delete Doctor</a>
-      <a href="doctor/showdoctor.php">Show Doctor</a>
-	  <a href="doctor/showdoctorschedule.php">Show Doctor Schedule</a>
+      <a href="../doctor/adddoctor.php">Add Doctor</a>
+      <a href="../doctor/deletedoctor.php">Delete Doctor</a>
+      <a href="../doctor/showdoctor.php">Show Doctor</a>
+	  <a href="../doctor/showdoctorschedule.php">Show Doctor Schedule</a>
     </div>
   </li>
   
   <li class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Clinic</a>
     <div class="dropdown-content">
-      <a href="addclinic.php">Add Clinic</a>
-      <a href="deleteclinic.php">Delete Clinic</a>
-      <a href="adddoctorclinic.php">Assign Doctor to Clinic</a>
-	  <a href="addmanagerclinic.php">Assign Manager to Clinic</a>
-	  <a href="deletedoctorclinic.php">Delete Doctor from Clinic</a>
-	  <a href="deletemanagerclinic.php">Delete Manager from Clinic</a>
-	  <a href="showclinic.php">Show Clinic</a>
+      <a href="../addclinic.php">Add Clinic</a>
+      <a href="../deleteclinic.php">Delete Clinic</a>
+      <a href="../adddoctorclinic.php">Assign Doctor to Clinic</a>
+	  <a href="../addmanagerclinic.php">Assign Manager to Clinic</a>
+	  <a href="../deletedoctorclinic.php">Delete Doctor from Clinic</a>
+	  <a href="../deletemanagerclinic.php">Delete Manager from Clinic</a>
+	  <a href="../showclinic.php">Show Clinic</a>
     </div>
   </li>
   <li class="dropdown">    
@@ -43,7 +44,7 @@
     </div>
   </li>
    <li>  
-	<form method="post" action="mainpage.php">	
+	<form method="post" action="../mainpage.php">	
 	<button type="submit" class="cancelbtn" name="logout" style="float:right;font-size:22px"><b>Log Out</b></button>
 	</form>
   </li>
@@ -81,11 +82,11 @@ session_start();
 if(isset($_POST['logout'])){
 		session_unset();
 		session_destroy();
-		header( "Refresh:1; url=alogin.php"); 
+		header( "Refresh:1; url=../alogin.php"); 
 	}
 function newUser()
 {
-	include 'dbconfig.php';
+	include '../../dbconfig.php';
 		$mid=$_POST['mid'];
 		$name=$_POST['name'];
 		$gender=$_POST['gender'];
@@ -100,7 +101,7 @@ function newUser()
 	if (mysqli_query($conn, $sql)) 
 	{
 		echo "<h2>Record created successfully!! Refreshing....</h2>";
-		header( "Refresh:2; url=addmanager.php");
+		header( "Refresh:2; url=manager/addmanager.php");
 
 	} 
 	else
@@ -110,7 +111,7 @@ function newUser()
 }
 function checkmid()
 {
-	include 'dbconfig.php';
+	include '../../dbconfig.php';
 	$mid=$_POST['mid'];
 	$sql= "SELECT * FROM manager WHERE MID = '$mid'";
 
@@ -130,7 +131,7 @@ function checkmid()
 }
 function checkusername()
 {
-	include 'dbconfig.php';
+	include '../../dbconfig.php';
 	$usn=$_POST['username'];
 	$sql= "SELECT * FROM manager WHERE Username = '$usn'";
 

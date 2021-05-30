@@ -67,9 +67,9 @@
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Manager</a>
         <div class="dropdown-content">
-          <a href="../addmanager.php">Add Manager</a>
-          <a href="../deletemanager.php">Delete Manager</a>
-          <a href="../showmanager.php">Show Manager</a>
+          <a href="../manager/addmanager.php">Add Manager</a>
+          <a href="../manager/deletemanager.php">Delete Manager</a>
+          <a href="../manager/showmanager.php">Show Manager</a>
         </div>
       </li>
       <li>
