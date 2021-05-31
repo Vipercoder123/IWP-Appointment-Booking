@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="../assets/bootstrap.css">
   <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
   <style>
+    body {
+      background: url("../images/mgrchange.jpg") repeat;
+
+    }
     a:hover {
       color: #f1f1f1;
     }
@@ -53,21 +57,31 @@
   }
 </style>
 
-<body style="background-image:url(../images/mgrchange.jpg)">
+<body>
+  <form id="log-out-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <input type="hidden" name="logout" value="pass">
+  </form>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="mgrmenu.php" class="logo">
-      <img src="../images/cal.png" width="30px" height="30px">
-      <b> Skylabs</b>
-      &nbspAppointment Booking System
+      Change/View Booking Status - 
+      <?php session_start(); echo $_SESSION['mgrname']; ?>
     </a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item animation1">
-          <a href="mgrmenu.php">Home</a>
+          <a href="#" onclick="document.forms['log-out-form'].submit(); return false;">Log Out</a>
         </li>
       </ul>
     </div>
   </nav>
+  <?php
+    if(isset($_POST['logout']))
+    {
+      session_unset();
+      session_destroy();
+      header( "Refresh:1; url=../index.php"); 
+    }
+  ?>
 
   <form class="mgrform" action="changebookingstatus.php" method="post">
       <label style="font-size:30px; margin-top: 15px"><b>Doctor:</b></label><br>
@@ -107,6 +121,7 @@
       $sql1 = "select * from book where DOV='". $_POST['dateselected']."' AND DID= $did AND CID= $cid order by Timestamp ASC";
 		  $results1=$conn->query($sql1); 
 			require_once("dbconfig.php");
+
   ?>
 
   <form class="formtable" action="changebookingstatus.php" method="post">;

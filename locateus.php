@@ -19,7 +19,7 @@
     }
 	  body {
 		  background: url('../images/doctordesk.jpg') no-repeat center center fixed; 
-		  backdrop-filter: blur(8px);
+      font-family: verdana;
 	  }
   </style>
 </head>

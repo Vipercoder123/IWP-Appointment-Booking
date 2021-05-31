@@ -1,18 +1,35 @@
 <html>
 <head>
+<title>Cancel Booking</title>
 <link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="assets/bootstrap.css">
+  <style>
+    a:hover {
+      color: #f1f1f1;
+    }
+    body {
+      background: url('images/cancelback.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: verdana;
+    }
+    option {
+      font-size: 1.1rem;
+    }
+  </style>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </head><?php include "dbconfig.php"; ?>
-<body style="background-image:url(images/cancelback.jpg)">
-	<div class="header">
-		<ul>
-			<li style="float:left;border-right:none"><a href="ulogin.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><strong> Skylabs </strong>Appointment Booking System</a></li>
-			<li><a href="ulogin.php">Home</a></li>
-		</ul>
-	</div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a class="navbar-brand" href="ulogin.php" class="logo"><img
+        src="images/cal.png" width="30px" height="30px"><b> Skylabs </b>&nbspAppointment Booking System </a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item animation1"><a href="ulogin.php">Home</a></li>
+      </ul>
+    </div>
+  </nav>
 	<form action="cancelbookingpatient.php" method="post">
 	<div class="sucontainer">
-		<label style="font-size:20px" >Select Appointment to Cancel:</label><br>
+		<label style="font-size:2rem" >Select Appointment to Cancel:</label><br>
 		<select name="appointment" id="appointment-list" class="demoInputBox"  style="width:100%;height:35px;border-radius:9px">
 		<option value="">Select Appointment</option>
 		<?php
@@ -38,8 +55,8 @@
 		?>
 		</select>
 		
-
-			<button type="submit" style="position:center" name="submit" value="Submit">Submit</button>
+    <br><br>
+		<button type="submit" style="position:center" name="submit" value="Submit">Submit</button>
 	</form>
 	<?php
 if(isset($_POST['submit']))
@@ -49,13 +66,16 @@ if(isset($_POST['submit']))
 		$updatequery="update book set Status='Cancelled by Patient' where username='$username' and timestamp= '$timestamp'";
 				if (mysqli_query($conn, $updatequery)) 
 				{
-							echo "Appointment Cancelled successfully..!!<br>";
-							header( "Refresh:2; url=ulogin.php");
-
+            echo "<script src=\"assets/modal.js\"></script>";
+						$msg = "Appointment Cancelled successfully..!!<br>";
+            echo "<script>MsgBox('".$msg."');</script>";
+						header( "Refresh:2; url=ulogin.php");
 				} 
 				else
 				{
-					echo "Error: " . $updatequery . "<br>" . mysqli_error($conn);
+            echo "<script src=\"assets/modal.js\"></script>";
+					  $msg = "Error: " . $updatequery . "<br>" . mysqli_error($conn);
+            echo "<script>MsgBox('".$msg."');</script>";
 				}
 
 }
