@@ -19,6 +19,7 @@
     }
 	  body {
 		  background: url('../images/doctordesk.jpg') no-repeat center center fixed; 
+      font-family: verdana;
 	  }
   </style>
 </head>

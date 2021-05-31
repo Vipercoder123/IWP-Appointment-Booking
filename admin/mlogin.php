@@ -12,7 +12,7 @@
   </style>
 </head>
 
-<body style="background-color: #56baed;">
+<body style="background-color: #56baed; font-family: verdana">
   <form action="mlogin.php" method="post">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="../index.php" class="logo">
