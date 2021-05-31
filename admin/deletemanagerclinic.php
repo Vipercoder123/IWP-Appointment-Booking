@@ -100,7 +100,7 @@ function getManager(val) {
 		</select>
 		
 		<label style="font-size:20px" >Manager:</label>
-		<select name="manager" id="manager-list" >
+		<select name="manager" id="manager-list">
 		<option value="">Select Manager</option>
 		</select>
 		

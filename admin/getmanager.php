@@ -7,22 +7,16 @@
 <script type="text/javascript">//alert("sdfsd");</script>
 <body>
 <?php
-require_once("dbconfig.php");
-	$query ="SELECT * FROM manager_clinic WHERE CID =".$_POST["cid"];
-	$results = $conn->query($query);
-?>
-	<option value="">Select Manager</option>
-<?php
-	while($rs=$results->fetch_assoc()) {
-		$query1="Select Name from manager where MID=".$rs["MID"];
-		$result1=$conn->query($query1);
-		while($rs1=$result1->fetch_assoc())
-		{
-?>
-	<option value="<?php echo $rs["MID"]; ?>"><?php echo "(MID=".$rs["MID"].")".$rs1["Name"]; ?></option>
-<?php
-		}
-}
-?>
+	require_once("dbconfig.php");
+	$cid = $_POST["cid"];
+	$query = "select * from manager_clinic join manager on manager.mid=manager_clinic.mid where cid=".$cid;
+	$results=$conn->query($query); 
+	echo "<option value=\"\">Select Manager</option>";
+	while($rs=$results->fetch_assoc()) { 
+	?>
+	<option value="<?php echo $rs["mid"]; ?>"><?php echo "MID=(".$rs["mid"].") ".$rs["name"]; ?></option>
+	<?php
+	}
+	?>
 </body>
 </html>
