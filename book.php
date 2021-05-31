@@ -87,7 +87,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a class="navbar-brand" href="ulogin.php" class="logo"><img
-        src="images/cal.png" width="30px" height="30px"><b>Skylabs</b>&nbspAppointment Booking System </a>
+        src="images/cal.png" width="30px" height="30px"><b> Skylabs </b>&nbspAppointment Booking System </a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item animation1"><a href="ulogin.php">Home</a></li>

@@ -116,9 +116,15 @@
     {
       include '../dbconfig.php';
       $did=$_POST['doctor'];
-      $cid=1;
+		  $mid=$_SESSION['mgrid'];
+
+      // Id of clinic from manager
+      $getCIDquery = "select * from manager_clinic where mid =".$mid;
+		  $CIDqueryResult=$conn->query($getCIDquery); 
+      $CIDqueryFetched = $CIDqueryResult->fetch_assoc();
+      $cid=$CIDqueryFetched['cid'];
       $dateselected=$_POST['dateselected'];
-      $sql1 = "select * from book where DOV='". $_POST['dateselected']."' AND DID= $did AND CID= $cid order by Timestamp ASC";
+      $sql1 = "select * from book where dov='". $_POST['dateselected']."' AND did= $did AND cid= $cid order by Timestamp ASC";
 		  $results1=$conn->query($sql1); 
 			require_once("dbconfig.php");
 
